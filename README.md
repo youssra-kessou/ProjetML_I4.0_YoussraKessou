@@ -27,4 +27,17 @@ Développer un modèle de machine learning pour prédire les arrêts de protecti
 - **Métriques** :
   - Recall, F1-score, AUC-ROC (priorité sur la détection des arrêts).
 
-### Fichier à finaliser à la fin du projet 
+### 3. Déploiement avec Docker
+- **Construire l'image** :
+  docker build -t cobot-api .
+- **Lancer le conteneur** :
+  docker run -p 5000:5000 --name cobot-container cobot-api
+- **Arrêter le conteneur** :
+  docker stop cobot-container
+
+### 4. Résultats Techniques
+- **Performances des Modèles** :
+
+Modèle      Recall (Classe 1)     F1-Score (Classe 1)	
+XGBoost	    78%	                  0.72	
+LSTM	      82%	                  0.75	
